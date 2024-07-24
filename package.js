@@ -1,8 +1,8 @@
 Package.describe({
   name: 'mozfet:autoform-materialize',
   summary: 'Materialize theme for Autoform',
-  version: '5.0.6',
-  git: 'https://github.com/mozfet/meteor-autoform-materialize.git'
+  version: '5.1.6',
+  git: 'https://github.com/AppWorkshop/meteor-autoform-materialize.git'
 });
 
 Npm.depends({
@@ -11,13 +11,12 @@ Npm.depends({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('METEOR@1.6');
-  api.use(['templating@1.3.0', 'blaze@2.3.0'], 'client');
+  api.use(['templating', 'blaze'], 'client');
   api.use([
     'aldeed:autoform@6.3.0',
     'mozfet:materialize-icons@1.1.7'
   ], 'client');
   api.use(['ecmascript', 'underscore'], 'client');
-  api.use('fourseven:scss@4.10.0');
+  api.use('fourseven:scss@4.15.1');
   api.addFiles(['index.js', 'style.scss'], 'client');
 });
